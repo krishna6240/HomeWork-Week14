@@ -25,14 +25,14 @@ public class HomePage extends Utility {
     }
 
     public void clickOnBankManagerLoginLink() {
-        Reporter.log(" Clicking on login link: " + _bankManagerLoginLink.toString() + "<br>");
-        waitUntilElementToBeClickable(_bankManagerLoginLink, 5);
+//        Reporter.log(" Clicking on login link: " + _bankManagerLoginLink.toString() + "<br>");
+        //waitUntilElementToBeClickable(_bankManagerLoginLink, 5);
         clickOnElement(_bankManagerLoginLink);
 
     }
 
     public void clickOnHomeButton() {
-        Reporter.log(" Clicking on Home Button " + _homeButton.toString() + "<br>");
+  //      Reporter.log(" Clicking on Home Button " + _homeButton.toString() + "<br>");
         clickOnElement(_homeButton);
 
     }

@@ -27,26 +27,26 @@ public class AddCustomerPage extends Utility {
     WebElement _addCustomerbtn;
 
     public void enterFirstName(String firstName) {
-        Reporter.log(" Enter first name " + firstName + " to the first name field" + _firstNameField.toString() + "<br>");
+        //Reporter.log(" Enter first name " + firstName + " to the first name field" + _firstNameField.toString() + "<br>");
         sendTextToElement(_firstNameField, firstName);
 
     }
 
     public void enterLastName(String lastName) {
-        Reporter.log(" Enter last name " + lastName + " to the last name field" + _lastNameField.toString() + "<br>");
+        //Reporter.log(" Enter last name " + lastName + " to the last name field" + _lastNameField.toString() + "<br>");
         sendTextToElement(_lastNameField, lastName);
 
     }
 
     public void enterPostCode(String postCode) {
-        Reporter.log(" Enter post code " + postCode + " to the post code field" + _postCodeField.toString() + "<br>");
+        //Reporter.log(" Enter post code " + postCode + " to the post code field" + _postCodeField.toString() + "<br>");
         sendTextToElement(_postCodeField, postCode);
 
     }
 
     public void clickOnAddCustomerButton() {
-        Reporter.log(" Clicking on add customer button " + _addCustomerbtn.toString() + "<br>");
-        waitUntilElementToBeClickable(_addCustomerbtn, 10);
+        //Reporter.log(" Clicking on add customer button " + _addCustomerbtn.toString() + "<br>");
+       // waitUntilElementToBeClickable(_addCustomerbtn, 10);
         clickOnElement(_addCustomerbtn);
 //        log.info(" Clicking on add customer button " + _addCustomerbtn.toString());
     }

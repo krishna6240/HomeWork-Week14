@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(CustomListeners.class)
+//@Listeners(CustomListeners.class)
 public class BankTest extends Testbase {
     String firstName = null;
     String lastName = null;
@@ -22,7 +22,7 @@ public class BankTest extends Testbase {
     CustomerLoginPage customerLoginPage;
     AccountPage accountPage;
 
-    @BeforeMethod(groups = {"Regression", "Smoke", "Sanity"})
+    @BeforeMethod(groups = {"regression", "smoke", "sanity"})
     public void inTt() {
 
         homePage = new HomePage();
@@ -36,13 +36,13 @@ public class BankTest extends Testbase {
     }
 
 
-    @BeforeTest(groups = {"Regression", "Sanity", "Smoke"})
+    @BeforeTest(groups = {"regression", "sanity", "smoke"})
     public void setUp1() {
         firstName = getRandomString(4);
         lastName = getRandomString(5);
     }
 
-    @Test(priority = 0, groups = {"Sanity", "Smoke", "Regression"})
+    @Test(groups = {"sanity", "regression"})
     public void bankManagerShouldAddCustomerSuccessfully() {
         homePage.clickOnBankManagerLoginLink();
         bankManagerLoginPage.clickOnAddCustomerLink();
@@ -54,7 +54,7 @@ public class BankTest extends Testbase {
         acceptAlert();
     }
 
-    @Test(priority = 1, groups = {"Sanity", "Regression"})
+    @Test(groups = {"sanity", "smoke", "regression"})
     public void bankManagerShouldOpenAccountSuccessfully() {
         homePage.clickOnHomeButton();
         homePage.clickOnBankManagerLoginLink();
@@ -68,7 +68,7 @@ public class BankTest extends Testbase {
         acceptAlert();
     }
 
-    @Test(priority = 2, groups = {"Sanity", "Regression"})
+    @Test(groups = {"smoke", "regression"})
     public void customerShouldLoginAndLogoutSuccessfully() {
         homePage.clickOnHomeButton();
         homePage.clickOnCustomerLoginLink();
@@ -80,13 +80,13 @@ public class BankTest extends Testbase {
         customerLoginPage.assertYourNameText("Your Name :");
     }
 
-    @Test(priority = 3, groups = {"Smoke", "Regression"})
+    @Test(groups = {"smoke", "regression"})
     public void customerShouldDepositeMoneySuccessfully() {
         homePage.clickOnHomeButton();
         homePage.clickOnCustomerLoginLink();
         openAccountPage.clickOnSearchCustomerField();
         openAccountPage.enterCustomerThatCreatedInFirstTest("Harry Potter");
-      //  customerLoginPage.clickOnSearchCreatedCustomerName();
+        //  customerLoginPage.clickOnSearchCreatedCustomerName();
         customerLoginPage.clickOnLoginButton();
         accountPage.clickOnDepositeTab();
         accountPage.enterdDepositAmount100(100);
@@ -94,22 +94,19 @@ public class BankTest extends Testbase {
         accountPage.assertDepositeSuccessfulText("Deposit Successful");
     }
 
-    @Test(priority = 4, groups = {"Smoke", "Regression"})
+    @Test(groups = {"regression"})
     public void customerShouldWithdrawMoneySuccessfully() {
         homePage.clickOnHomeButton();
         homePage.clickOnCustomerLoginLink();
         openAccountPage.clickOnSearchCustomerField();
         openAccountPage.enterCustomerThatCreatedInFirstTest("Harry Potter");
-        //  customerLoginPage.clickOnSearchCreatedCustomerName();
         customerLoginPage.clickOnLoginButton();
         accountPage.clickOnWithdrawlTab();
         accountPage.enterWithdrawlAmount50("50");
         accountPage.clicOnWithdrawlButton();
-       // accountPage.assertTransactionSuccessfulText("Transaction successful");
 
 
     }
-
 
 
 }

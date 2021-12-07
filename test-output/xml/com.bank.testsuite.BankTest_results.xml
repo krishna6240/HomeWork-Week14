@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="9.383">
+           time="7.982">
   <properties />
   
   
-            <testcase name="customerShouldDepositeMoneySuccessfully" time="1.747" classname="com.bank.testsuite.BankTest" />
-                <testcase name="customerShouldWithdrawMoneySuccessfully" time="1.887" classname="com.bank.testsuite.BankTest" />
-                <testcase name="customerShouldLoginAndLogoutSuccessfully" time="1.596" classname="com.bank.testsuite.BankTest" />
-                <testcase name="bankManagerShouldOpenAccountSuccessfully" time="2.233" classname="com.bank.testsuite.BankTest" />
-                <testcase name="bankManagerShouldAddCustomerSuccessfully" time="1.920" classname="com.bank.testsuite.BankTest" />
+            <testcase name="customerShouldDepositeMoneySuccessfully" time="1.688" classname="com.bank.testsuite.BankTest" />
+                <testcase name="customerShouldWithdrawMoneySuccessfully" time="1.864" classname="com.bank.testsuite.BankTest" />
+                <testcase name="bankManagerShouldOpenAccountSuccessfully" time="1.558" classname="com.bank.testsuite.BankTest" />
+                <testcase name="bankManagerShouldAddCustomerSuccessfully" time="1.426" classname="com.bank.testsuite.BankTest" />
+                <testcase name="customerShouldLoginAndLogoutSuccessfully" time="1.446" classname="com.bank.testsuite.BankTest" />
       
 </testsuite>

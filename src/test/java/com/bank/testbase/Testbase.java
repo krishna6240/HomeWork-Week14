@@ -10,13 +10,12 @@ import org.testng.annotations.BeforeTest;
 public class Testbase extends Utility {
     String browser = PropertyReader.getInstance().getProperty("browser");
 
-    @BeforeTest(groups = {"Regression","Sanity","Smoke"})
-    @BeforeMethod
+    @BeforeMethod(groups = {"regression","sanity","smoke"})
     public void setUp(){
-        selectBrowser(browser);
+    selectBrowser(browser);
     }
-    @AfterTest(groups = {"Regression","Sanity","Smoke"})
-    @AfterMethod
+    @AfterMethod(groups = {"regression","sanity","smoke"})
+
     public void tearDown(){
         closeBrowser();
     }
